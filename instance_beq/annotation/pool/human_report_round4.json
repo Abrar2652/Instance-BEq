@@ -1,0 +1,231 @@
+{
+  "round": 4,
+  "raters": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5"
+  ],
+  "n_raters": 5,
+  "metrics": {
+    "kappa_overall": 0.806,
+    "kappa_definitional": 0.877,
+    "kappa_instance_soundness": 0.744,
+    "kappa_statement_faithfulness": 0.585,
+    "kappa_transfer_validity": 0.687,
+    "acc_min": 0.842,
+    "mean_minutes_per_item": 4.13
+  },
+  "verdicts": {
+    "kappa_overall": "OK  ",
+    "kappa_instance_soundness": "OK  ",
+    "kappa_definitional": "OK  ",
+    "kappa_statement_faithfulness": "OK  ",
+    "acc_min": "OK  ",
+    "mean_minutes_per_item": "OK  "
+  },
+  "cohen_pairwise_mean_overall": 0.802,
+  "fleiss_overall": 0.806,
+  "acc_by_check": {
+    "H1": {
+      "definitional": 1.0,
+      "instance_soundness": 0.947,
+      "statement_faithfulness": 1.0,
+      "transfer_validity": 1.0
+    },
+    "H2": {
+      "definitional": 0.958,
+      "instance_soundness": 0.895,
+      "statement_faithfulness": 0.9,
+      "transfer_validity": 0.75
+    },
+    "H3": {
+      "definitional": 0.917,
+      "instance_soundness": 0.684,
+      "statement_faithfulness": 0.9,
+      "transfer_validity": 1.0
+    },
+    "H4": {
+      "definitional": 1.0,
+      "instance_soundness": 0.947,
+      "statement_faithfulness": 1.0,
+      "transfer_validity": 1.0
+    },
+    "H5": {
+      "definitional": 1.0,
+      "instance_soundness": 0.895,
+      "statement_faithfulness": 0.9,
+      "transfer_validity": 1.0
+    }
+  },
+  "acc_overall": {
+    "H1": 0.982,
+    "H2": 0.912,
+    "H3": 0.842,
+    "H4": 0.982,
+    "H5": 0.947
+  },
+  "calibration_gate": {
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "H4": true,
+    "H5": true
+  },
+  "person_hours_total": 19.6,
+  "timing_by_check_min": {
+    "definitional": 2.67,
+    "instance_soundness": 5.48,
+    "statement_faithfulness": 4.84,
+    "transfer_validity": 4.68
+  },
+  "warmup_fatigue": {
+    "H1": {
+      "warmup_ratio": 1.08,
+      "fatigue_ratio": 0.86
+    },
+    "H2": {
+      "warmup_ratio": 1.15,
+      "fatigue_ratio": 0.91
+    },
+    "H3": {
+      "warmup_ratio": 1.32,
+      "fatigue_ratio": 1.11
+    },
+    "H4": {
+      "warmup_ratio": 1.31,
+      "fatigue_ratio": 0.88
+    },
+    "H5": {
+      "warmup_ratio": 1.25,
+      "fatigue_ratio": 1.12
+    }
+  },
+  "n_splits": 11,
+  "splits": [
+    {
+      "id": "IT0040",
+      "check": "statement_faithfulness",
+      "target": "Lasso_convergence",
+      "votes": {
+        "unfaithful": 3,
+        "faithful": 2
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0022",
+      "check": "instance_soundness",
+      "target": "JointSparseCoding_problem.ProblemData",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0056",
+      "check": "transfer_validity",
+      "target": "LeastSquares_GD.gradient_method",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0038",
+      "check": "definitional",
+      "target": "Lasso_pro.f",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0039",
+      "check": "instance_soundness",
+      "target": "Lasso_pg.pg",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0014",
+      "check": "instance_soundness",
+      "target": "Lasso_ADMM.toADMM",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0031",
+      "check": "definitional",
+      "target": "Logistic_regression_problem.f",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0042",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "votes": {
+        "faithful": 4,
+        "unfaithful": 1
+      },
+      "majority": "faithful",
+      "gold": "faithful"
+    },
+    {
+      "id": "IT0015",
+      "check": "instance_soundness",
+      "target": "isConvexKKT.isLasso_KKT",
+      "votes": {
+        "unfaithful": 3,
+        "faithful": 2
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0023",
+      "check": "instance_soundness",
+      "target": "BCD_JointSparse.BCD",
+      "votes": {
+        "unfaithful": 3,
+        "faithful": 2
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    },
+    {
+      "id": "IT0057",
+      "check": "statement_faithfulness",
+      "target": "LeastSquares_GD.gradient_method",
+      "votes": {
+        "unfaithful": 4,
+        "faithful": 1
+      },
+      "majority": "unfaithful",
+      "gold": "unfaithful"
+    }
+  ],
+  "majority_vs_gold": 0.982,
+  "converged": true
+}

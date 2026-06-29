@@ -1,0 +1,415 @@
+{
+  "dir": "Regen_gd",
+  "n_files": 14,
+  "n_compile": 6,
+  "n_compile_err": 8,
+  "n_hollow_among_compiling": 0,
+  "hollow_rate_pct": 0.0,
+  "files": [
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Least_squares_problem_gradient_descent/Trial1.lean",
+      "compiles": true,
+      "n_errors": 0,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "LeastSquares_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "LeastSquares_GD.Gradient_Descent",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Least_squares_problem_gradient_descent/Trial1_fixed.lean",
+      "compiles": true,
+      "n_errors": 0,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "LeastSquares_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "LeastSquares_GD.Gradient_Descent",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Least_squares_problem_gradient_descent/Trial2.lean",
+      "compiles": true,
+      "n_errors": 0,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "LeastSquares_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "LeastSquares_GD.Gradient_Descent",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Least_squares_problem_gradient_descent/Trial2_fixed.lean",
+      "compiles": true,
+      "n_errors": 0,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "LeastSquares_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "LeastSquares_GD.Gradient_Descent",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Least_squares_problem_gradient_descent/Trial3.lean",
+      "compiles": true,
+      "n_errors": 0,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "LeastSquares_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "LeastSquares_GD.Gradient_Descent",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Least_squares_problem_gradient_descent/Trial3_fixed.lean",
+      "compiles": true,
+      "n_errors": 0,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "LeastSquares_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "LeastSquares_GD.Gradient_Descent",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Logistic_regression_gradient_descent/Trial1.lean",
+      "compiles": false,
+      "n_errors": 4,
+      "uses_sorry_warning": true,
+      "instances": [
+        {
+          "instance": "Logistic_regression_problem.unconstrained_problem",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 1,
+      "hollow_instances": [
+        "Logistic_regression_problem.unconstrained_problem"
+      ],
+      "file_has_hollow": true
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Logistic_regression_gradient_descent/Trial2.lean",
+      "compiles": false,
+      "n_errors": 20,
+      "uses_sorry_warning": true,
+      "instances": [
+        {
+          "instance": "Logistic_regression_problem.unconstrained_problem",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "Logistic_regression_GD.Gradient_Descent",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [
+        "Logistic_regression_problem.unconstrained_problem",
+        "Logistic_regression_GD.Gradient_Descent"
+      ],
+      "file_has_hollow": true
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Logistic_regression_gradient_descent/Trial3.lean",
+      "compiles": false,
+      "n_errors": 39,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "Logistic_regression_problem.unconstrained_problem",
+          "verdict": "unknown",
+          "axioms": null
+        },
+        {
+          "instance": "Logistic_regression_GD.Gradient_Descent",
+          "verdict": "unknown",
+          "axioms": null
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Quadratic_minimization_gradient_descent/Trial1.lean",
+      "compiles": false,
+      "n_errors": 12,
+      "uses_sorry_warning": true,
+      "instances": [
+        {
+          "instance": "Quadratic_minimization_problem.unconstrained_problem",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "Quadratic_minimization_GD.Gradient_Descent",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [
+        "Quadratic_minimization_problem.unconstrained_problem",
+        "Quadratic_minimization_GD.Gradient_Descent"
+      ],
+      "file_has_hollow": true
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Quadratic_minimization_gradient_descent/Trial2.lean",
+      "compiles": false,
+      "n_errors": 36,
+      "uses_sorry_warning": false,
+      "instances": [
+        {
+          "instance": "Quadratic_minimization_problem.unconstrained_problem",
+          "verdict": "unknown",
+          "axioms": null
+        },
+        {
+          "instance": "Quadratic_minimization_GD.Gradient_Descent",
+          "verdict": "unknown",
+          "axioms": null
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [],
+      "file_has_hollow": false
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Quadratic_minimization_gradient_descent/Trial3.lean",
+      "compiles": false,
+      "n_errors": 17,
+      "uses_sorry_warning": true,
+      "instances": [
+        {
+          "instance": "Quadratic_minimization_problem.unconstrained_problem",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "Quadratic_minimization_GD.Gradient_Descent",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [
+        "Quadratic_minimization_problem.unconstrained_problem",
+        "Quadratic_minimization_GD.Gradient_Descent"
+      ],
+      "file_has_hollow": true
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Ridge_regression_gradient_descent/Trial1.lean",
+      "compiles": false,
+      "n_errors": 16,
+      "uses_sorry_warning": true,
+      "instances": [
+        {
+          "instance": "Ridge_regression_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "Ridge_regression_GD.Gradient_Descent",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [
+        "Ridge_regression_GD.Gradient_Descent"
+      ],
+      "file_has_hollow": true
+    },
+    {
+      "file": "Code/lean/Optlib/Autoformalization/Regen_gd/Ridge_regression_gradient_descent/Trial2.lean",
+      "compiles": false,
+      "n_errors": 12,
+      "uses_sorry_warning": true,
+      "instances": [
+        {
+          "instance": "Ridge_regression_problem.unconstrained_problem",
+          "verdict": "sound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "instance": "Ridge_regression_GD.Gradient_Descent",
+          "verdict": "hollow",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "n_instances": 2,
+      "hollow_instances": [
+        "Ridge_regression_GD.Gradient_Descent"
+      ],
+      "file_has_hollow": true
+    }
+  ]
+}

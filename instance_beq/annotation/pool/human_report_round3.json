@@ -1,0 +1,113 @@
+{
+  "round": 3,
+  "raters": [
+    "H1",
+    "H2"
+  ],
+  "metrics": {
+    "kappa_overall": 0.849,
+    "kappa_definitional": 0.903,
+    "kappa_instance_soundness": 0.89,
+    "kappa_statement_faithfulness": 0.615,
+    "kappa_transfer_validity": 0.0,
+    "acc_H1": 0.982,
+    "acc_H2": 0.912,
+    "mean_minutes_per_item": 3.75,
+    "person_hours_57x2": 7.12
+  },
+  "verdicts": {
+    "kappa_overall": "OK  ",
+    "kappa_instance_soundness": "OK  ",
+    "kappa_definitional": "OK  ",
+    "kappa_transfer_validity": "LOW ",
+    "kappa_statement_faithfulness": "OK  ",
+    "acc_H1": "OK  ",
+    "acc_H2": "OK  ",
+    "mean_minutes_per_item": "OK  ",
+    "person_hours_57x2": "OK  "
+  },
+  "acc_by_check": {
+    "H1": {
+      "definitional": 1.0,
+      "instance_soundness": 0.947,
+      "statement_faithfulness": 1.0,
+      "transfer_validity": 1.0
+    },
+    "H2": {
+      "definitional": 0.958,
+      "instance_soundness": 0.895,
+      "statement_faithfulness": 0.9,
+      "transfer_validity": 0.75
+    }
+  },
+  "calibration_gate": {
+    "H1": true,
+    "H2": true
+  },
+  "timing_by_check": {
+    "definitional": 2.46,
+    "instance_soundness": 4.96,
+    "statement_faithfulness": 4.16,
+    "transfer_validity": 4.7
+  },
+  "warmup_fatigue": {
+    "H1": {
+      "first5_mean_s": 176.2,
+      "rest_mean_s": 163.0,
+      "warmup_ratio": 1.08,
+      "firsthalf_mean_s": 176.4,
+      "secondhalf_mean_s": 152.4,
+      "fatigue_ratio": 0.86
+    },
+    "H2": {
+      "first5_mean_s": 324.8,
+      "rest_mean_s": 281.9,
+      "warmup_ratio": 1.15,
+      "firsthalf_mean_s": 299.1,
+      "secondhalf_mean_s": 272.6,
+      "fatigue_ratio": 0.91
+    }
+  },
+  "disagreements": [
+    {
+      "id": "IT0056",
+      "check": "transfer_validity",
+      "target": "LeastSquares_GD.gradient_method",
+      "H1": "unfaithful",
+      "H2": "faithful",
+      "gold": "unfaithful",
+      "expected": false
+    },
+    {
+      "id": "IT0042",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "H1": "faithful",
+      "H2": "unfaithful",
+      "gold": "faithful",
+      "expected": true
+    },
+    {
+      "id": "IT0015",
+      "check": "instance_soundness",
+      "target": "isConvexKKT.isLasso_KKT",
+      "H1": "unfaithful",
+      "H2": "faithful",
+      "gold": "unfaithful",
+      "expected": true
+    },
+    {
+      "id": "IT0057",
+      "check": "statement_faithfulness",
+      "target": "LeastSquares_GD.gradient_method",
+      "H1": "unfaithful",
+      "H2": "faithful",
+      "gold": "unfaithful",
+      "expected": true
+    }
+  ],
+  "n_disagreements": 4,
+  "n_disagreements_expected": 3,
+  "transfer_raw_agreement": 0.75,
+  "converged": true
+}

@@ -1,0 +1,193 @@
+{
+  "items": [
+    {
+      "family": "GD_example",
+      "case": "original",
+      "truth": "sound",
+      "llm_judge": "sound",
+      "why": "SOUND"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:update",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\nupdate"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:hl",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\nhl := by sorry"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:step₁",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW  \nstep₁"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\n`initial`"
+    },
+    {
+      "family": "PGD_example",
+      "case": "original",
+      "truth": "sound",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\nupdate2"
+    },
+    {
+      "family": "PGD_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\ninitial"
+    },
+    {
+      "family": "PGD_example",
+      "case": "sorry:update",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\ninstance proximal_gradient_method_Lasso.proximal_gradient_method (self : proximal_gradient_method_Lasso pro x₀) :\n    proximal_gradient (Lasso_problem.c"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "original",
+      "truth": "sound",
+      "llm_judge": "sound",
+      "why": "SOUND"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:hl",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nhl"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\ninitial"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:teq",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nteq"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:γeq",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\n`γeq`"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:update1",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\nupdate1"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:update2",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\nupdate2"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "original",
+      "truth": "sound",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nupdate_cor"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:hl",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nhl"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\ninitial"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:teq",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nteq"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:γeq",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\n`γeq`"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update1",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nupdate1"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update2",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\nupdate2"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update3",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n\nupdate3"
+    },
+    {
+      "family": "ADMM_example",
+      "case": "original",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n`instance Lasso.isProblem`"
+    },
+    {
+      "family": "BCD_example",
+      "case": "original",
+      "truth": "hollow",
+      "llm_judge": "hollow",
+      "why": "HOLLOW\n`conH`"
+    }
+  ],
+  "metrics": {
+    "tp": 21,
+    "fp": 2,
+    "fn": 0,
+    "tn": 2,
+    "P": 0.9130434782608695,
+    "R": 1.0,
+    "F1": 0.9545454545454545
+  },
+  "transitive_caught": [
+    2,
+    2
+  ],
+  "model": "qwen2.5-7b-instruct"
+}

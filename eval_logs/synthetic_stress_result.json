@@ -1,0 +1,736 @@
+{
+  "n_total": 78,
+  "n_soundness_typecheck": 71,
+  "n_soundness_excluded_nontypecheck": 11,
+  "n_definitional": 7,
+  "all_typecheck": false,
+  "soundness_certifier": {
+    "n": 71,
+    "tp": 67,
+    "fp": 0,
+    "fn": 0,
+    "tn": 4,
+    "P": 1.0,
+    "R": 1.0,
+    "F1": 1.0
+  },
+  "soundness_blind_baseline_recall": 0.0,
+  "soundness_n_hollow": 67,
+  "definitional_curated_coverage": "1/1",
+  "definitional_false_certifications": 0,
+  "seconds": 252,
+  "items": [
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "original",
+      "truth": "faithful",
+      "certifier": "faithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:hl",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:step₁",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update+hl",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update+step₁",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:hl+step₁",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:hl+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:step₁+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update+hl+step₁",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update+hl+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:update+step₁+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "GD_example",
+      "mut": "sorry:hl+step₁+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "PGD_example",
+      "mut": "original",
+      "truth": "faithful",
+      "certifier": "faithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "PGD_example",
+      "mut": "sorry:initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "PGD_example",
+      "mut": "sorry:update",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "PGD_example",
+      "mut": "sorry:initial+update",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "original",
+      "truth": "faithful",
+      "certifier": "faithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial+teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:teq+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:teq+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:teq+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+initial+teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+initial+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+initial+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+initial+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+teq+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+teq+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+teq+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+γeq+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+γeq+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:hl+update1+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial+teq+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovFirst_example",
+      "mut": "sorry:initial+teq+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "original",
+      "truth": "faithful",
+      "certifier": "faithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:update3",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+initial",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+update3",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:initial+teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:initial+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:initial+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:initial+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:initial+update3",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:teq+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+initial+teq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+initial+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+initial+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+initial+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+initial+update3",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+teq+γeq",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+teq+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+teq+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+teq+update3",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": false
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+γeq+update1",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+γeq+update2",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "soundness",
+      "family": "NesterovSecond_example",
+      "mut": "sorry:hl+γeq+update3",
+      "truth": "unfaithful",
+      "certifier": "unfaithful",
+      "typechecks": true
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "original",
+      "truth": "faithful",
+      "certifier": "faithful",
+      "typechecks": true
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "const-1/3",
+      "truth": "unfaithful",
+      "certifier": null,
+      "typechecks": false
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "const-2",
+      "truth": "unfaithful",
+      "certifier": null,
+      "typechecks": false
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "drop-half",
+      "truth": "unfaithful",
+      "certifier": null,
+      "typechecks": false
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "no-square",
+      "truth": "unfaithful",
+      "certifier": null,
+      "typechecks": false
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "sign-flip",
+      "truth": "unfaithful",
+      "certifier": null,
+      "typechecks": false
+    },
+    {
+      "gen": "definitional",
+      "family": "GD_example",
+      "mut": "wrong-norm",
+      "truth": "unfaithful",
+      "certifier": null,
+      "typechecks": false
+    }
+  ]
+}

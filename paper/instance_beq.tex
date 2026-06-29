@@ -1,0 +1,276 @@
+% Instance-BEq — AAAI main-technical-track draft.
+% Build: pdflatex (AAAI style omitted here; \documentclass is a placeholder for local compile).
+% Tables are auto-generated: \input{results_tables.tex}  (run scripts/make_tables.py first).
+\documentclass[11pt]{article}
+\usepackage{booktabs,amsmath,amssymb,xcolor,hyperref,graphicx}
+\newcommand{\sound}{\textcolor{green!55!black}{sound}}
+\newcommand{\hollow}{\textcolor{red!75!black}{\textbf{hollow}}}
+\newcommand{\cmark}{\checkmark}\newcommand{\xmark}{$\times$}
+\newcommand{\ibeq}{\textsc{Instance-BEq}}
+\title{\ibeq{}: Formal Faithfulness Certification for\\ Structure-to-Instance Theorem Autoformalization}
+\author{(anonymous)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Autoformalizers that target \emph{structure-to-instance} reasoning---specializing an abstract
+formal theory (e.g.\ the convergence theory of gradient descent) to a concrete problem (e.g.\ ridge
+regression)---produce Lean \texttt{def}s, typeclass \texttt{instance}s, and instantiated theorems.
+A generated file may \emph{type-check} while encoding the wrong objective, certifying nothing
+(a \emph{hollow} instance whose structural conditions are discharged by \texttt{sorry}), or stating
+a theorem that differs from the informal claim. Type-checking is necessary but not sufficient for
+faithfulness, and no prior faithfulness metric operates below the theorem-\emph{statement} level.
+We introduce \ibeq{}, a formal faithfulness certifier operating at the
+definition / instance / theorem-transfer granularity. Its core is a kernel-decided
+\emph{instance-soundness} check that inspects the transitive axiom closure of an instance for
+\texttt{sorryAx}, detecting hollow instances that type-checking and LLM-judges miss. On the gold
+examples released with the base system (SITA), \ibeq{} finds that \textbf{2 of 6} of the authors'
+own hand-written instances are hollow; on a controlled fault-injection benchmark it attains
+\textbf{precision = recall = 1.0} where type-check-only attains recall~$0$; and its definitional
+check is kernel-sound (a proved equality is genuine), giving precision~$1$ by construction. Against
+four baselines (type-check-only, BEq+, an LLM-judge, and SITA's majority-vote) on a human-labelled
+benchmark, \ibeq{} attains the highest overall F1 ($0.97$, 95\% CI $[0.88,1.00]$) and makes the
+fewest false certifications ($1$ vs $3$--$23$), while being the only method that addresses the
+instance-soundness and transfer-validity checks at all. We release the certifier, the benchmark,
+ablations isolating its coverage levers, and a human-correlation study.
+\end{abstract}
+
+\section{Introduction}
+% THESIS
+Type-checking is the de-facto success criterion for autoformalization pipelines, but it is a weak
+guarantee. A Lean file can compile while (i) a \texttt{def} encodes a different mathematical object
+than intended, (ii) a typeclass \texttt{instance} that is supposed to \emph{certify} an abstract
+structure's conditions discharges one of those conditions with \texttt{sorry}---directly or through
+a helper lemma---so the certificate is \emph{hollow}, or (iii) an instantiated theorem states a
+different rate or drops a hypothesis relative to the informal claim. These failures survive the
+type-checker because \texttt{sorry} is a \emph{warning}, not an error, and because the type-checker
+never compares the formal artifact to the informal target.
+
+The structure-to-instance setting (formalized by SITA) is where these failures bite hardest: its
+pipeline emits exactly these three artifact types and its only semantic check is LLM majority
+voting. We close this gap with \ibeq{}, a certifier with one check per artifact type
+(Figure~\ref{fig:overview}). The headline
+check---\emph{instance soundness}---is \emph{decidable}: it walks the transitive axiom closure of an
+instance (the mechanism behind \texttt{\#print axioms}) and flags any \texttt{sorryAx} or
+non-allowlisted axiom. This converts the base system's informal ``the instance certifies the
+conditions'' into an auditable, machine-checked property.
+
+\paragraph{Contributions.}
+\begin{enumerate}
+\item \textbf{\ibeq{}}, the first faithfulness certifier below the statement level: definitional
+equivalence (check~1), instance soundness via axiom closure (check~2), and theorem-transfer
+validity (check~3a), with an LLM-assisted statement-faithfulness bridge (check~3b). The formal
+certificate is $1\wedge 2\wedge 3a$, each kernel-grounded.
+\item \textbf{The hollow-instance phenomenon, measured.} On the 6 gold structure families released
+with SITA, 2/6 of the authors' own hand-written instances are hollow (Table~\ref{tab:gold}),
+localized to specific condition fields (Table~\ref{tab:fields}). Hollowness is structural, not a
+generation artifact.
+\item \textbf{A controlled benchmark with exact ground truth.} On planted faults, check~2 attains
+$P{=}R{=}F1{=}1.0$ while type-check-only is blind to every fault (Table~\ref{tab:faults}); check~1
+is kernel-sound (Table~\ref{tab:check1}).
+\item \textbf{A full comparison against four baselines on a human-labelled benchmark}: against
+type-check-only, BEq+, an LLM-judge, and the base system's majority voting (Table~\ref{tab:methods},
+Fig.~\ref{fig:methodsf1}), \ibeq{} attains the highest overall F1 ($0.97$, bootstrap CI
+$[0.88,1.00]$) and the fewest false certifications ($1$ vs $3$--$23$), with a Kendall-$\tau$
+human-correlation study showing it reaches the inter-annotator ceiling where the check is decidable.
+\item \textbf{Ablations and a scaled stress benchmark.} We isolate the certifier's coverage
+levers---reference source and tactic-ensemble size (Tables~\ref{tab:refabl},~\ref{tab:tacticsize})---and
+verify the soundness guarantee holds on a 71-item synthetic benchmark with labels certain by
+construction (Table~\ref{tab:synthetic}); every claim regenerates from a script in \texttt{scripts/}.
+\end{enumerate}
+
+\section{Related Work}
+All published faithfulness work is \emph{statement-level}. \textbf{BEq} (Liu et al., ICLR 2025) and
+\textbf{BEq+/BEq\textsubscript{L}} (Poiroux et al., EMNLP 2025) certify equivalence of two theorem
+\emph{statements} via bidirectional symbolic proof; \textbf{ReForm} adds reflective self-validation;
+\textbf{Proxy-Judge} (2026) builds a reference-free multi-axis LLM-judge. None inspect
+\texttt{def}s, typeclass \texttt{instance}s, or theorem-transfer, and crucially none perform
+\emph{axiom-closure} analysis: their strongest kernel check verifies that elaboration completes,
+which a \texttt{sorry}-backed hollow instance passes. \ibeq{} is reference-based and
+kernel-proof-based, and detects exactly the hollow-instance failure their checks miss. We adopt
+BEq+'s symbolic-tactic philosophy for check~1 and run BEq+ as a statement-level baseline. Axiom
+auditing itself (\texttt{\#print axioms}, lean4checker) is known plumbing for proof hygiene; our
+novelty is its use as an instance-faithfulness metric.
+
+\section{Method}
+% --- FIG overview (Figure 1) --------------------------------------------------------------
+% CONCEPTUAL schematic — the only figure not drawn from a result file (scripts/figures/fig_overview.py).
+% CLAIM: conveys the method/pipeline and the three checks; visualises the headline intuition
+%        (a generated instance type-checks yet `#print axioms` surfaces a hidden sorryAx -> HOLLOW),
+%        i.e. EXPERIMENT_PLAN Section C / objection R1 (type-checking is not sufficient).
+\begin{figure*}[t]\centering
+  \includegraphics[width=\textwidth]{figures/overview.pdf}
+  \caption{Instance-BEq certifies a generated Lean file at the definition, instance, and
+  theorem-transfer level; its headline check traces the instance's transitive axiom closure, so a
+  hollow instance that type-checks (because \texttt{sorry} is only a warning) is exposed as
+  \texttt{sorryAx} in the closure.}
+  \label{fig:overview}
+\end{figure*}
+
+\paragraph{Setup.} A structure-to-instance artifact realizes one abstract structure
+$S=\langle D,O,C,T\rangle$ (definitions, operations, conditions, theorems) for a concrete instance.
+The generated file contains instance-specific \texttt{def}s ($D$), a bridging
+\texttt{instance}\,:\,$S$ (wiring $D,O$ and discharging $C$), and instantiated theorems ($T$).
+
+\paragraph{Check 1 — definitional faithfulness.} For a generated \texttt{def} $D_{\text{gen}}$ we
+obtain an independent reference $D_{\text{ref}}$ (retrieval from the library, or an LLM that never
+sees $D_{\text{gen}}$) and discharge $D_{\text{gen}}=D_{\text{ref}}$ with a tactic ensemble
+(\texttt{rfl}/\texttt{simp}/\texttt{ring}/\texttt{unfold;ring}). Because the kernel is sound, a
+proved equality is genuine: check~1 never falsely certifies (precision~$1$); recall is the open
+quantity, reported with a three-way \{faithful, unfaithful, unknown\} verdict.
+
+\paragraph{Check 2 — instance soundness (headline).} An \texttt{instance}\,:\,$S$ type-checks
+regardless of whether its condition fields are really proven. We compute the transitive axiom
+closure of the instance via \texttt{\#print axioms} and require it to be \texttt{sorry}-free and
+within the allowlist $\{$\texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}$\}$. This
+is \emph{decidable}, hence an exact certificate. Per-field tracing localizes the offending
+condition. Crucially, the check is scoped to the \emph{instance's condition fields}, not the
+instantiated theorem---the abstract template lemmas are \texttt{sorry}-bodied by design, so a
+theorem-level closure is trivially \texttt{sorryAx}-tainted and uninformative.
+
+\paragraph{Check 3 — theorem transfer.} (3a, symbolic) We synthesize the canonical transfer proof
+\texttt{apply $T_{\text{abs}}$ \dots} and compile it; if it closes, the instance theorem is a
+genuine specialization. A mis-stated theorem (e.g.\ a wrong rate constant) fails to unify and is
+flagged. To stay sound, 3a emits only \{valid, unknown\}, never ``invalid'' (a correct but
+differently-phrased statement could also fail the canonical \texttt{apply}). (3b, LLM-assisted) We
+back-translate the instance theorem and compare it to the informal claim; this is the one check
+where the informal side forces an LLM, so it is reported separately with calibration.
+
+\section{Experiments}
+\paragraph{Setup.} Lean v4.13.0 + Mathlib + Optlib; all checks run on real Lean (the mock CI suite
+is separate). The LLM-assisted components use a locally served Qwen2.5-7B-Instruct. Every number
+below is regenerated from a logged run by a script in \texttt{scripts/}.
+
+\paragraph{Benchmark.} Our gold set is $57$ real Lean artifacts---$24$ definitional, $19$
+instance-soundness, $4$ theorem-transfer, $10$ statement items ($34$ faithful / $23$
+unfaithful)---drawn from the released Optlib/SITA gold examples (including the hollow ADMM/BCD
+instances), regenerated SITA outputs, controlled plants (constant/term/sign corruptions and
+\texttt{sorry}-injections, whose construction-truth anchors the labels), and minimal hand-built
+fixtures. Each item carries provenance and a panel label from five annotators (Fleiss
+$\kappa=0.81$ overall); the panel majority matches the adjudicated gold on $56/57$. The
+transfer-validity slice is deliberately small ($n{=}4$): released instantiated theorems are scarce,
+so we read its result qualitatively (Instance-BEq is the only method that addresses it at all) and
+back it with the $71$-item synthetic soundness benchmark for scale.
+
+\input{results_tables.tex}
+\input{figures.tex}
+
+\paragraph{Head-to-head across all four checks (Table~\ref{tab:methods}; Fig.~\ref{fig:methodsf1}).}
+On the 57-item human gold we compare five methods: type-check-only (A), SITA's majority-vote
+self-consistency judge (B, $K{=}5$), an LLM-judge (C), the statement-level BEq+ baseline, and
+\ibeq{}. \ibeq{} attains the highest overall F1 ($0.97$, 95\% CI $[0.88,1.00]$) and Kendall
+$\tau$ ($0.95$) against the gold, with the two structural checks decisive: it is exact on instance
+soundness ($F1{=}1.0$) and is the \emph{only} method with non-zero recall on transfer validity
+($F1{=}1.0$; every LLM-based method and BEq+ score $0$, unable to judge whether the instantiated
+theorem is a genuine \texttt{apply}-specialization). Crucially, \ibeq{} makes the \emph{fewest}
+false certifications---accepting a truly-unfaithful artifact as faithful---of any method: $1$
+(on the LLM statement bridge, check 3b), versus $3$ (majority-vote), $4$ (LLM-judge), $17$ (BEq+,
+blind to instance soundness and transfer), and $23$ (type-check-only, blind to everything). On the
+formal checks (def./soundness/transfer) its false-certification count is $0$ by kernel soundness.
+This is the precision/recall separation a certifier is built for: \ibeq{} is a \emph{sound}
+certifier (on the definitional check it certifies rather than detects, abstaining at coverage
+$0.59$ rather than risk a false certification), trading coverage for a guarantee the LLM methods
+cannot offer.
+
+\paragraph{Hollow instances exist in gold data (Table~\ref{tab:gold},~\ref{tab:fields};
+Fig.~\ref{fig:goldhollow}).} Across all 6 released families, check~2 certifies GD,
+Proximal-Gradient, and both Nesterov instances as \sound{}, and flags ADMM and BCD as \hollow{}:
+their bridging instances carry \texttt{sorryAx} in the closure because condition fields (ADMM:
+subproblem-uniqueness \texttt{hX,hY} and iteration correctness \texttt{iter\textsubscript{1..3}};
+BCD: block updates \texttt{s\textsubscript{1,2}}) are discharged by \texttt{sorry}-bodied lemmas.
+These are the authors' own hand-written examples, yet they certify none of the conditions their
+convergence theorems require---while type-checking cleanly.
+
+\paragraph{Exactness vs.\ type-checking (Table~\ref{tab:faults}; Fig.~\ref{fig:prf}).} On 4 sound
+instances and 19 planted-hollow variants (one condition field replaced by \texttt{sorry}), check~2
+is exact ($P{=}R{=}F1{=}1.0$, zero disagreements with ground truth), whereas type-check-only never
+flags a fault ($R{=}0$): \texttt{sorry} is a warning, so every hollow variant still compiles.
+Figure~\ref{fig:catch} makes the failure modes concrete at the instance level, and
+Figure~\ref{fig:prtradeoff} casts the comparison as a precision--recall trade-off in which the
+certifier alone reaches the $(1,1)$ corner.
+
+\paragraph{Kernel-soundness of check~1 (Table~\ref{tab:check1}; Fig.~\ref{fig:check1}).} On the
+LeastSquares objective, check~1 proves all equivalent references (recall~$1.0$ here) and rejects
+every corruption (wrong constant, missing factor, missing square, sign flip) with zero false
+certifications.
+
+\paragraph{LLM-judge comparison (Table~\ref{tab:judge}).} On the same soundness corpus, a modern
+LLM-judge (Qwen2.5-7B) shown the full file reaches recall~$1.0$---it caught every hollow instance,
+including the transitively-hollow gold ADMM/BCD---but only precision~$0.913$: it produced two
+\emph{false positives}, condemning sound instances (the PGD and Nesterov-II gold) that contain
+\emph{no} \texttt{sorry} anywhere in the file. These are not defensible inferences but
+hallucinations, and they are exactly the unreliability a kernel-decided certifier cannot exhibit:
+check~2 attains $P{=}R{=}1.0$ on the identical corpus. The LLM-judge also offers no guarantee---its
+verdict varies with model and prompt---whereas axiom closure is exact and model-free. Aggregating
+$K{=}5$ votes (baseline B, SITA's self-consistency principle) lifts overall judge accuracy only
+marginally ($0.75{\to}0.79$) and does not remove the soundness false positives; the statement-level
+BEq+ baseline, having no instance-level check at all, is \emph{blind} to all 13 hollow gold
+instances (recall $0$) and to transfer validity---precisely the def/instance/transfer granularity
+gap \ibeq{} closes.
+
+\paragraph{Correlation with human judgement (Table~\ref{tab:human}; Fig.~\ref{fig:tauhuman}).} On a
+57-item benchmark labelled by a five-annotator panel (inter-annotator Fleiss $\kappa$: 0.88
+definitional, 0.74 soundness, 0.59 statement), the LLM-judge agrees with humans only moderately
+overall and its Kendall $\tau$ \emph{collapses} on the hard checks (definitional $\tau{=}0.17$,
+transfer $\tau{=}0.00$), staying below the human ceiling; type-check-only is blind everywhere
+($\tau{=}0$). Where the check is kernel-decidable (soundness), Instance-BEq is exact ($\tau{=}1.0$,
+above the human ceiling). A unanimous human panel even mislabels a non-certifiable instance as
+faithful, which only the axiom-closure gate catches. The LLM-judge is also miscalibrated
+(Fig.~\ref{fig:calibration}, ECE~$0.179$): its most-used maximal-confidence rating is still wrong
+14\% of the time, underscoring why the formal certificate---reported separately from the LLM bridge
+(check 3b)---is the load-bearing contribution.
+
+\paragraph{Ablations: reference source and ensemble size (Table~\ref{tab:refabl},~\ref{tab:tacticsize};
+Fig.~\ref{fig:ablations}).} Check~1 is a sound certifier whose \emph{coverage} (never its precision,
+which is $1$ by kernel soundness) depends on two design choices. (i) \emph{Reference source}: a
+curated/property reference certifies $59\%$ ($10/17$) of faithful definitions, whereas a local 7B
+model's reference---few-shot or zero-shot---certifies none, as its expressions rarely elaborate
+into the file's notation; every arm makes zero false certifications. This isolates reference
+generation, not the kernel check, as the coverage bottleneck (a stronger reference model is the
+lever; \S Limitations). (ii) \emph{Tactic-ensemble size}: on a ladder of five equivalent references
+for one objective, a single tactic ($\mathtt{rfl}$) proves only the syntactically identical form
+($1/5$); growing the ensemble to five tactics proves all five, while false certifications on
+corrupted references stay $0$ at every size.
+
+\paragraph{Scaling beyond the human set (Table~\ref{tab:synthetic}).} To test whether the
+conclusions hold past 57 items, we build a synthetic stress benchmark whose labels are certain by
+construction: planting \texttt{sorry} into every $k$-subset ($k{=}1,2,3$) of each sound instance's
+condition fields yields $67$ known-hollow variants that still type-check (plus $4$ sound originals).
+On these $71$ items Instance-BEq check~2 remains exact---no missed hollow, no false
+certification---while type-check-only and BEq+ keep recall $0$ at every scale; the certifier's
+guarantee is structural, not a small-sample artifact. A revealing negative result: corrupting a
+\emph{definition} in these structured files does \emph{not} produce a type-checking-yet-unfaithful
+artifact, because the downstream gradient/update proofs are tied to the objective and break when it
+is wrong---the structure partly self-protects at the definition level, which is exactly why the
+\emph{instance} level, where \texttt{sorry} is a mere warning, is the silent failure mode our
+headline check targets.
+
+\paragraph{Hollowness in fresh generations.} Certifying SITA's regenerated Gradient-Descent
+outputs, $6/14$ type-check and \emph{all $6$ are sound} ($0\%$ hollow): on this easy family the
+model either compiles a faithful instance or fails to compile---it does not produce the
+type-checks-yet-hollow artifacts that appear on the hard families (ADMM, BCD), where even the
+authors' \emph{released} gold is hollow ($2/6$, \S Table~\ref{tab:gold}). A full regeneration sweep
+across all 42 problems---and especially the hard families---with a frontier generator would
+quantify the hollow-rate at scale; with only local 7--14B models the rate is generator-confounded,
+so we report the \emph{model-independent} gold measurement as the headline and treat the full sweep
+as future work (it needs a stronger generation model than is available here).
+
+\section{Conclusion}
+Type-checking is necessary but not sufficient for faithful autoformalization. \ibeq{} supplies the
+missing sufficient-side machinery at the definition/instance/transfer granularity, with a decidable
+instance-soundness certificate at its core; across five methods it makes the fewest false
+certifications and is exact on the two structural checks no prior method addresses, and it shows
+that hollow instances occur even in hand-curated gold data.
+\paragraph{Limitations.} (i) Check-1 is a \emph{sound} certifier: its precision is $1$ but its
+coverage depends on the reference generator---a curated/property reference certifies $59\%$ of
+faithful definitions, a local 7B model none, so a stronger reference model (a frontier API, not
+available in our setup) is the lever for higher definitional coverage. (ii) The statement check
+(3b) is the one LLM-assisted component and the source of the certifier's single false certification;
+it is reported separately from the formal certificate. (iii) The full-scale regeneration hollow-rate
+needs a frontier generator; we report the model-independent gold and synthetic measurements instead.
+(iv) The 57-item human gold is small; the synthetic stress benchmark ($71$ items) and bootstrap CIs
+bound this, but a larger multi-annotator study remains valuable.
+
+\end{document}

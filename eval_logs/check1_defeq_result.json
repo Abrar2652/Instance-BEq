@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "label": "identical",
+      "ref": "1 / 2 * ‖A *ᵥ x - b‖₂ ^ 2",
+      "truth": "faithful",
+      "verdict": "faithful",
+      "winning_tactic": "rfl",
+      "correct": true
+    },
+    {
+      "label": "div-form",
+      "ref": "‖A *ᵥ x - b‖₂ ^ 2 / 2",
+      "truth": "faithful",
+      "verdict": "faithful",
+      "winning_tactic": "unfold LeastSquares_problem.f; ring",
+      "correct": true
+    },
+    {
+      "label": "inv-form",
+      "ref": "2⁻¹ * ‖A *ᵥ x - b‖₂ ^ 2",
+      "truth": "faithful",
+      "verdict": "faithful",
+      "winning_tactic": "unfold LeastSquares_problem.f; ring",
+      "correct": true
+    },
+    {
+      "label": "factored",
+      "ref": "(‖A *ᵥ x - b‖₂ ^ 2) * (1/2)",
+      "truth": "faithful",
+      "verdict": "faithful",
+      "winning_tactic": "unfold LeastSquares_problem.f; ring",
+      "correct": true
+    },
+    {
+      "label": "wrong-const-1/3",
+      "ref": "1 / 3 * ‖A *ᵥ x - b‖₂ ^ 2",
+      "truth": "unfaithful",
+      "verdict": "unfaithful",
+      "winning_tactic": null,
+      "correct": true
+    },
+    {
+      "label": "missing-half",
+      "ref": "‖A *ᵥ x - b‖₂ ^ 2",
+      "truth": "unfaithful",
+      "verdict": "unfaithful",
+      "winning_tactic": null,
+      "correct": true
+    },
+    {
+      "label": "no-square",
+      "ref": "1 / 2 * ‖A *ᵥ x - b‖₂",
+      "truth": "unfaithful",
+      "verdict": "unfaithful",
+      "winning_tactic": null,
+      "correct": true
+    },
+    {
+      "label": "sign-flip",
+      "ref": "1 / 2 * ‖A *ᵥ x + b‖₂ ^ 2",
+      "truth": "unfaithful",
+      "verdict": "unfaithful",
+      "winning_tactic": null,
+      "correct": true
+    }
+  ],
+  "recall_on_equivalents": 1.0,
+  "false_certifications": 0
+}

@@ -1,0 +1,520 @@
+{
+  "model": "qwen2.5-7b-instruct",
+  "n": 57,
+  "wall_s": 119.2,
+  "items": [
+    {
+      "id": "IT0027",
+      "check": "statement_faithfulness",
+      "target": "LeastSquares_GD.gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0040",
+      "check": "statement_faithfulness",
+      "target": "Lasso_convergence",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 4,
+      "correct": true
+    },
+    {
+      "id": "IT0045",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": true
+    },
+    {
+      "id": "IT0052",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 3,
+      "correct": true
+    },
+    {
+      "id": "IT0049",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0004",
+      "check": "transfer_validity",
+      "target": "LeastSquares_GD.gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0029",
+      "check": "instance_soundness",
+      "target": "Ridge_regression_GD.Gradient_Descent",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0018",
+      "check": "definitional",
+      "target": "JointSparseCoding_problem.f",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": false
+    },
+    {
+      "id": "IT0005",
+      "check": "definitional",
+      "target": "Lasso_problem.f",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0022",
+      "check": "instance_soundness",
+      "target": "JointSparseCoding_problem.ProblemData",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": true
+    },
+    {
+      "id": "IT0056",
+      "check": "transfer_validity",
+      "target": "LeastSquares_GD.gradient_method",
+      "gold": "unfaithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": false
+    },
+    {
+      "id": "IT0046",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": true
+    },
+    {
+      "id": "IT0038",
+      "check": "definitional",
+      "target": "Lasso_pro.f",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": true
+    },
+    {
+      "id": "IT0033",
+      "check": "instance_soundness",
+      "target": "Quadratic_minimization_GD.Gradient_Descent",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0039",
+      "check": "instance_soundness",
+      "target": "Lasso_pg.pg",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0019",
+      "check": "definitional",
+      "target": "JointSparseCoding_problem.g",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": false
+    },
+    {
+      "id": "IT0013",
+      "check": "instance_soundness",
+      "target": "Lasso.isProblem",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": false
+    },
+    {
+      "id": "IT0010",
+      "check": "transfer_validity",
+      "target": "Lasso_convergence",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0032",
+      "check": "definitional",
+      "target": "Quadratic_minimization_problem.f",
+      "gold": "unfaithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": false
+    },
+    {
+      "id": "IT0014",
+      "check": "instance_soundness",
+      "target": "Lasso_ADMM.toADMM",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": true
+    },
+    {
+      "id": "IT0011",
+      "check": "definitional",
+      "target": "Lasso.f₁",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0020",
+      "check": "definitional",
+      "target": "JointSparseCoding_problem.H",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": false
+    },
+    {
+      "id": "IT0031",
+      "check": "definitional",
+      "target": "Logistic_regression_problem.f",
+      "gold": "unfaithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": false
+    },
+    {
+      "id": "IT0042",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": false
+    },
+    {
+      "id": "IT0015",
+      "check": "instance_soundness",
+      "target": "isConvexKKT.isLasso_KKT",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": true
+    },
+    {
+      "id": "IT0024",
+      "check": "statement_faithfulness",
+      "target": "JointSparse_Sufficient_Descent1",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0003",
+      "check": "statement_faithfulness",
+      "target": "LeastSquares_GD.gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0036",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 3,
+      "correct": true
+    },
+    {
+      "id": "IT0025",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0043",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": false
+    },
+    {
+      "id": "IT0030",
+      "check": "statement_faithfulness",
+      "target": "Ridge_regression_GD.gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0047",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": true
+    },
+    {
+      "id": "IT0021",
+      "check": "definitional",
+      "target": "JointSparseCoding_problem.ψ",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": false
+    },
+    {
+      "id": "IT0017",
+      "check": "transfer_validity",
+      "target": "lasso_ADMM_converges",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0034",
+      "check": "statement_faithfulness",
+      "target": "Quadratic_minimization_GD.gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0009",
+      "check": "statement_faithfulness",
+      "target": "Lasso_convergence",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0023",
+      "check": "instance_soundness",
+      "target": "BCD_JointSparse.BCD",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": true
+    },
+    {
+      "id": "IT0041",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": false
+    },
+    {
+      "id": "IT0016",
+      "check": "statement_faithfulness",
+      "target": "lasso_ADMM_converges",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0051",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 4,
+      "correct": true
+    },
+    {
+      "id": "IT0035",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": false
+    },
+    {
+      "id": "IT0054",
+      "check": "instance_soundness",
+      "target": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0048",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 1,
+      "correct": true
+    },
+    {
+      "id": "IT0008",
+      "check": "instance_soundness",
+      "target": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0053",
+      "check": "instance_soundness",
+      "target": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0028",
+      "check": "definitional",
+      "target": "Ridge_regression_problem.f",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0012",
+      "check": "definitional",
+      "target": "Lasso.f₂",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0057",
+      "check": "statement_faithfulness",
+      "target": "LeastSquares_GD.gradient_method",
+      "gold": "unfaithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": false
+    },
+    {
+      "id": "IT0026",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0050",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0006",
+      "check": "definitional",
+      "target": "Lasso_problem.g",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0044",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "unfaithful",
+      "confidence": 2,
+      "correct": false
+    },
+    {
+      "id": "IT0001",
+      "check": "definitional",
+      "target": "LeastSquares_problem.f",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0002",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0007",
+      "check": "definitional",
+      "target": "Lasso_problem.target",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0037",
+      "check": "statement_faithfulness",
+      "target": "LeastSquares_GD.gradient_method",
+      "gold": "faithful",
+      "llm_judge": "faithful",
+      "confidence": 5,
+      "correct": true
+    },
+    {
+      "id": "IT0055",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "gold": "unfaithful",
+      "llm_judge": "unfaithful",
+      "confidence": 5,
+      "correct": true
+    }
+  ]
+}

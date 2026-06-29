@@ -1,0 +1,66 @@
+{
+  "ensemble": [
+    "rfl",
+    "unfold LeastSquares_problem.f; rfl",
+    "unfold LeastSquares_problem.f; simp",
+    "unfold LeastSquares_problem.f; ring",
+    "unfold LeastSquares_problem.f; funext; ring_nf"
+  ],
+  "n_equiv": 5,
+  "n_corrupt": 4,
+  "equiv": [
+    {
+      "label": "identical",
+      "win": 0
+    },
+    {
+      "label": "div-form",
+      "win": 3
+    },
+    {
+      "label": "inv-form",
+      "win": 2
+    },
+    {
+      "label": "factored",
+      "win": 3
+    },
+    {
+      "label": "sub-form",
+      "win": 3
+    }
+  ],
+  "corrupt": [
+    {
+      "label": "const-1/3",
+      "win": null
+    },
+    {
+      "label": "missing-½",
+      "win": null
+    },
+    {
+      "label": "no-square",
+      "win": null
+    },
+    {
+      "label": "sign-flip",
+      "win": null
+    }
+  ],
+  "coverage_at_k": [
+    1,
+    1,
+    2,
+    5,
+    5
+  ],
+  "false_cert_at_k": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "seconds": 556
+}

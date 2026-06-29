@@ -1,0 +1,289 @@
+{
+  "n_items": 19,
+  "n_decidable": 15,
+  "agreement_decidable": 1.0,
+  "disagreements": [],
+  "inconclusive": [
+    {
+      "id": "IT0026",
+      "path": "Regen_gd/Least_squares_problem_gradient_descent/Trial1.lean",
+      "gold": "sound"
+    },
+    {
+      "id": "IT0029",
+      "path": "Regen_gd/Ridge_regression_gradient_descent/Trial1.lean",
+      "gold": "sound"
+    },
+    {
+      "id": "IT0033",
+      "path": "Regen_gd/Quadratic_minimization_gradient_descent/Trial1.lean",
+      "gold": "sound"
+    },
+    {
+      "id": "IT0036",
+      "path": "tests/mock_data/artifacts/faithful_leastsquares.lean",
+      "gold": "hollow"
+    }
+  ],
+  "items": [
+    {
+      "id": "IT0002",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "Example/GD_example.lean",
+      "gold": "sound",
+      "tool": "sound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0008",
+      "target": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "path": "Example/PGD_example.lean",
+      "gold": "sound",
+      "tool": "sound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0013",
+      "target": "Lasso.isProblem",
+      "path": "Example/ADMM_example.lean",
+      "gold": "sound",
+      "tool": "sound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0014",
+      "target": "Lasso_ADMM.toADMM",
+      "path": "Example/ADMM_example.lean",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0015",
+      "target": "isConvexKKT.isLasso_KKT",
+      "path": "Example/ADMM_example.lean",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0022",
+      "target": "JointSparseCoding_problem.ProblemData",
+      "path": "Example/BCD_example.lean",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0023",
+      "target": "BCD_JointSparse.BCD",
+      "path": "Example/BCD_example.lean",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0026",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "Regen_gd/Least_squares_problem_gradient_descent/Trial1.lean",
+      "gold": "sound",
+      "tool": "inconclusive",
+      "axioms": null,
+      "decidable": false,
+      "agree": null
+    },
+    {
+      "id": "IT0029",
+      "target": "Ridge_regression_GD.Gradient_Descent",
+      "path": "Regen_gd/Ridge_regression_gradient_descent/Trial1.lean",
+      "gold": "sound",
+      "tool": "inconclusive",
+      "axioms": null,
+      "decidable": false,
+      "agree": null
+    },
+    {
+      "id": "IT0033",
+      "target": "Quadratic_minimization_GD.Gradient_Descent",
+      "path": "Regen_gd/Quadratic_minimization_gradient_descent/Trial1.lean",
+      "gold": "sound",
+      "tool": "inconclusive",
+      "axioms": null,
+      "decidable": false,
+      "agree": null
+    },
+    {
+      "id": "IT0036",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "tests/mock_data/artifacts/faithful_leastsquares.lean",
+      "gold": "hollow",
+      "tool": "inconclusive",
+      "axioms": null,
+      "decidable": false,
+      "agree": null
+    },
+    {
+      "id": "IT0039",
+      "target": "Lasso_pg.pg",
+      "path": "tests/mock_data/artifacts/hollow_lasso.lean",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "sorryAx"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0049",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "planted/sorry/Example/GD_example.lean::LeastSquares_GD.Gradient_Descent::update",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0050",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "planted/sorry/Example/GD_example.lean::LeastSquares_GD.Gradient_Descent::hl",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0051",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "planted/sorry/Example/GD_example.lean::LeastSquares_GD.Gradient_Descent::step₁",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0052",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "planted/sorry/Example/GD_example.lean::LeastSquares_GD.Gradient_Descent::initial",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0053",
+      "target": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "path": "planted/sorry/Example/PGD_example.lean::proximal_gradient_method_Lasso.proximal_gradient_method::initial",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0054",
+      "target": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "path": "planted/sorry/Example/PGD_example.lean::proximal_gradient_method_Lasso.proximal_gradient_method::update",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    },
+    {
+      "id": "IT0055",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "path": "_scratch/GD_example_hollow.lean",
+      "gold": "hollow",
+      "tool": "hollow",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "decidable": true,
+      "agree": true
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+[
+  {
+    "id": "IT0001",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0002",
+    "check": "instance_soundness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0003",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0004",
+    "check": "transfer_validity",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0005",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0006",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0007",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0008",
+    "check": "instance_soundness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0009",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0010",
+    "check": "transfer_validity",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0011",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0012",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0013",
+    "check": "instance_soundness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0014",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0015",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0016",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0017",
+    "check": "transfer_validity",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0018",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0019",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0020",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0021",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0022",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0023",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0024",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0025",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0026",
+    "check": "instance_soundness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0027",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0028",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0029",
+    "check": "instance_soundness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0030",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0031",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0032",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0033",
+    "check": "instance_soundness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0034",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0035",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0036",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0037",
+    "check": "statement_faithfulness",
+    "gold": "faithful",
+    "beqplus": "faithful",
+    "blind": false
+  },
+  {
+    "id": "IT0038",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0039",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0040",
+    "check": "statement_faithfulness",
+    "gold": "unfaithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0041",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0042",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0043",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0044",
+    "check": "definitional",
+    "gold": "faithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0045",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0046",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0047",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0048",
+    "check": "definitional",
+    "gold": "unfaithful",
+    "beqplus": "unfaithful",
+    "blind": false
+  },
+  {
+    "id": "IT0049",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0050",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0051",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0052",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0053",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0054",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0055",
+    "check": "instance_soundness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0056",
+    "check": "transfer_validity",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": true
+  },
+  {
+    "id": "IT0057",
+    "check": "statement_faithfulness",
+    "gold": "unfaithful",
+    "beqplus": "faithful",
+    "blind": false
+  }
+]

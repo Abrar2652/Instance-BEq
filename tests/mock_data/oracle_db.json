@@ -1,0 +1,208 @@
+{
+  "h:5c5a5729a6a3f8df": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "soundness_LeastSquares_GD.Gradient_Descent": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {
+      "LeastSquares_GD.Gradient_Descent": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "update_cor": [
+        "propext"
+      ],
+      "pos_l": [
+        "propext"
+      ]
+    }
+  },
+  "defeq_LeastSquares_problem.f_rfl_b2ecaa": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_LeastSquares_problem.f_simponlylh_b17fbf": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_LeastSquares_problem.f_unfoldlhsr_855dd7": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_LeastSquares_problem.f_unfoldlhsr_0f2bc1": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_LeastSquares_problem.f_decide_d14809": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "transfer_LeastSquares_GD.gradient_method": {
+    "ok": true,
+    "errors": [],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "h:4844244a2320d9d1": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      {
+        "line": 1,
+        "column": 0,
+        "message": "declaration uses 'sorry'"
+      }
+    ],
+    "uses_sorry": true,
+    "axioms": {}
+  },
+  "soundness_Lasso_pg.pg": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      {
+        "line": 1,
+        "column": 0,
+        "message": "declaration uses 'sorry'"
+      }
+    ],
+    "uses_sorry": true,
+    "axioms": {
+      "Lasso_pg.pg": [
+        "propext",
+        "Classical.choice",
+        "sorryAx"
+      ],
+      "bad_update_lemma": [
+        "propext",
+        "sorryAx"
+      ]
+    }
+  },
+  "defeq_Lasso_pro.f_rfl_b2ecaa": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_Lasso_pro.f_simponlylh_b17fbf": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_Lasso_pro.f_unfoldlhsr_855dd7": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_Lasso_pro.f_unfoldlhsr_0f2bc1": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "defeq_Lasso_pro.f_decide_d14809": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 3,
+        "column": 0,
+        "message": "unsolved goals"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  },
+  "transfer_Lasso_convergence": {
+    "ok": false,
+    "errors": [
+      {
+        "line": 2,
+        "column": 2,
+        "message": "apply failed: rate constant mismatch"
+      }
+    ],
+    "warnings": [],
+    "uses_sorry": false,
+    "axioms": {}
+  }
+}

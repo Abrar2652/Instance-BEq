@@ -1,0 +1,61 @@
+{
+  "panel": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5"
+  ],
+  "n_raters": 5,
+  "fleiss_kappa": {
+    "overall": 0.806,
+    "definitional": 0.877,
+    "instance_soundness": 0.744,
+    "statement_faithfulness": 0.585,
+    "transfer_validity": 0.687
+  },
+  "adjudicated_gold_reproduces_gold": true,
+  "n_adjudicated_splits": 11,
+  "panel_majority_vs_gold": {
+    "overall_acc": 0.982,
+    "by_check": {
+      "definitional": {
+        "n": 24,
+        "majority_acc": 1.0
+      },
+      "instance_soundness": {
+        "n": 19,
+        "majority_acc": 0.947
+      },
+      "statement_faithfulness": {
+        "n": 10,
+        "majority_acc": 1.0
+      },
+      "transfer_validity": {
+        "n": 4,
+        "majority_acc": 1.0
+      }
+    }
+  },
+  "consensus_errors_only_the_tool_catches": [
+    {
+      "id": "IT0036",
+      "check": "instance_soundness",
+      "target": "LeastSquares_GD.Gradient_Descent",
+      "panel_majority": "faithful",
+      "expert_gold": "unfaithful",
+      "votes": {
+        "faithful": 5
+      },
+      "note": "HOLLOW/non-certifiable: instance fields update:=self.update_cor, hl:=pro.pos_l (and the LeastSquares_GD class, unconstrained_problem instance) are NOT defined in this fixture, so the certifying proofs cannot be exhibited; per protocol a non-certifiable soundness case is not scored faithful. Construction_truth corrected faithful->unfaithful. All 5 raters correct; #print axioms on the built toolchain is the final confirmation."
+    }
+  ],
+  "tau_ceiling_by_check_kappa": {
+    "definitional": 0.877,
+    "instance_soundness": 0.744,
+    "statement_faithfulness": 0.585,
+    "transfer_validity": 0.687
+  },
+  "person_hours_total": 19.6,
+  "mean_minutes_per_item": 4.13
+}

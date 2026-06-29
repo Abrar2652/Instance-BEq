@@ -1,0 +1,172 @@
+{
+  "ADMM_example": {
+    "instance": "Lasso_ADMM.toADMM",
+    "fields": [
+      {
+        "field": "hX",
+        "lemma": "Lasso.uniq_subX",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "hY",
+        "lemma": "Lasso.uniq_subY",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "iter₁",
+        "lemma": "Lasso_ADMM.iter_cor1",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "iter₂",
+        "lemma": "Lasso_ADMM.iter_cor2",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "iter₃",
+        "lemma": "Lasso_ADMM.iter_cor3",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "initial₁",
+        "lemma": "Lasso_ADMM.initial₁",
+        "verdict": "clean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "initial₂",
+        "lemma": "Lasso_ADMM.initial₂",
+        "verdict": "clean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "initial₃",
+        "lemma": "Lasso_ADMM.initial₃",
+        "verdict": "clean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "tainted_fields": [
+      "hX",
+      "hY",
+      "iter₁",
+      "iter₂",
+      "iter₃"
+    ]
+  },
+  "BCD_example": {
+    "instance": "BCD_JointSparse.BCD",
+    "fields": [
+      {
+        "field": "s₁",
+        "lemma": "BCD_JointSparse.update_cor1",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "s₂",
+        "lemma": "BCD_JointSparse.update_cor2",
+        "verdict": "SORRY-TAINTED",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "tainted_fields": [
+      "s₁",
+      "s₂"
+    ]
+  },
+  "GD_example": {
+    "instance": "LeastSquares_GD.Gradient_Descent",
+    "fields": [
+      {
+        "field": "update",
+        "lemma": "LeastSquares_GD.update_cor",
+        "verdict": "clean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "hl",
+        "lemma": null,
+        "verdict": "inline/data",
+        "axioms": null
+      },
+      {
+        "field": "step₁",
+        "lemma": "LeastSquares_GD.ht",
+        "verdict": "clean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "field": "initial",
+        "lemma": "LeastSquares_GD.initial",
+        "verdict": "clean",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "tainted_fields": []
+  }
+}

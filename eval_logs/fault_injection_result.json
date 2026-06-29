@@ -1,0 +1,206 @@
+{
+  "items": [
+    {
+      "family": "GD_example",
+      "case": "original",
+      "field": null,
+      "truth": "sound",
+      "certifier": "sound",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:update",
+      "field": "update",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:hl",
+      "field": "hl",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:step₁",
+      "field": "step₁",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:initial",
+      "field": "initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "PGD_example",
+      "case": "original",
+      "field": null,
+      "truth": "sound",
+      "certifier": "sound",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "PGD_example",
+      "case": "sorry:initial",
+      "field": "initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "PGD_example",
+      "case": "sorry:update",
+      "field": "update",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "original",
+      "field": null,
+      "truth": "sound",
+      "certifier": "sound",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:hl",
+      "field": "hl",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:initial",
+      "field": "initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:teq",
+      "field": "teq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:γeq",
+      "field": "γeq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:update1",
+      "field": "update1",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:update2",
+      "field": "update2",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "original",
+      "field": null,
+      "truth": "sound",
+      "certifier": "sound",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:hl",
+      "field": "hl",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:initial",
+      "field": "initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:teq",
+      "field": "teq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:γeq",
+      "field": "γeq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update1",
+      "field": "update1",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update2",
+      "field": "update2",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update3",
+      "field": "update3",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "baselineA_typechecks": true
+    }
+  ],
+  "certifier": {
+    "tp": 19,
+    "fp": 0,
+    "fn": 0,
+    "tn": 4,
+    "P": 1.0,
+    "R": 1.0,
+    "F1": 1.0
+  },
+  "baselineA": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 19,
+    "tn": 4,
+    "P": NaN,
+    "R": 0.0,
+    "F1": 0.0
+  }
+}

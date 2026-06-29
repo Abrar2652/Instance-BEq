@@ -1,0 +1,131 @@
+[
+  {
+    "family": "GD_example",
+    "gold": {
+      "instance": "LeastSquares_GD.Gradient_Descent",
+      "verdict": "faithful",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [],
+      "compiles": true,
+      "uses_sorry_warning": false,
+      "errors": [],
+      "expected": "faithful"
+    },
+    "hollow": {
+      "instance": "LeastSquares_GD.Gradient_Descent",
+      "verdict": "unfaithful",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [
+        "sorryAx"
+      ],
+      "compiles": true,
+      "uses_sorry_warning": true,
+      "errors": []
+    }
+  },
+  {
+    "family": "PGD_example",
+    "gold": {
+      "instance": "proximal_gradient_method_Lasso.proximal_gradient_method",
+      "verdict": "faithful",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [],
+      "compiles": true,
+      "uses_sorry_warning": false,
+      "errors": [],
+      "expected": "faithful"
+    },
+    "hollow": null
+  },
+  {
+    "family": "BCD_example",
+    "gold": {
+      "instance": "BCD_JointSparse.BCD",
+      "verdict": "unfaithful",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [
+        "sorryAx"
+      ],
+      "compiles": true,
+      "uses_sorry_warning": true,
+      "errors": [],
+      "expected": "unfaithful"
+    },
+    "hollow": null
+  },
+  {
+    "family": "ADMM_example",
+    "gold": {
+      "instance": "Lasso_ADMM.toADMM",
+      "verdict": "unfaithful",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [
+        "sorryAx"
+      ],
+      "compiles": true,
+      "uses_sorry_warning": true,
+      "errors": [],
+      "expected": "unfaithful"
+    },
+    "hollow": null
+  },
+  {
+    "family": "NesterovFirst_example",
+    "gold": {
+      "instance": "Nesterov_first_fix_stepsize_Lasso.Nesterov_first_fix_stepsize",
+      "verdict": "faithful",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [],
+      "compiles": true,
+      "uses_sorry_warning": false,
+      "errors": [],
+      "expected": "faithful"
+    },
+    "hollow": null
+  },
+  {
+    "family": "NesterovSecond_example",
+    "gold": {
+      "instance": "Nesterov_second_fix_stepsize_Lasso.Nesterov_second_fix_stepsize",
+      "verdict": "faithful",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "bad": [],
+      "compiles": true,
+      "uses_sorry_warning": false,
+      "errors": [],
+      "expected": "faithful"
+    },
+    "hollow": null
+  }
+]

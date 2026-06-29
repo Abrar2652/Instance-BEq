@@ -1,0 +1,863 @@
+{
+  "model": "qwen2.5-7b-instruct",
+  "K": 5,
+  "n": 57,
+  "wall_s": 157.0,
+  "items": [
+    {
+      "id": "IT0027",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0040",
+      "check": "statement_faithfulness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0045",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0052",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0049",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0004",
+      "check": "transfer_validity",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0029",
+      "check": "instance_soundness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0018",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0005",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0022",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0056",
+      "check": "transfer_validity",
+      "gold": "unfaithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0046",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "faithful",
+        "unfaithful",
+        "faithful"
+      ],
+      "agreement": 0.6,
+      "correct": true
+    },
+    {
+      "id": "IT0038",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0033",
+      "check": "instance_soundness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0039",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0019",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0013",
+      "check": "instance_soundness",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0010",
+      "check": "transfer_validity",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0032",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0014",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0011",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0020",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "faithful",
+        "unfaithful",
+        "faithful",
+        "unfaithful"
+      ],
+      "agreement": 0.6,
+      "correct": false
+    },
+    {
+      "id": "IT0031",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0042",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "faithful",
+        "unfaithful",
+        "faithful"
+      ],
+      "agreement": 0.6,
+      "correct": false
+    },
+    {
+      "id": "IT0015",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0024",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0003",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0036",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0025",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0043",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0030",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0047",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0021",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0017",
+      "check": "transfer_validity",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0034",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0009",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0023",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0041",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0016",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0051",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0035",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0054",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0048",
+      "check": "definitional",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0008",
+      "check": "instance_soundness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0053",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0028",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0012",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "unfaithful",
+        "faithful"
+      ],
+      "agreement": 0.8,
+      "correct": true
+    },
+    {
+      "id": "IT0057",
+      "check": "statement_faithfulness",
+      "gold": "unfaithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": false
+    },
+    {
+      "id": "IT0026",
+      "check": "instance_soundness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0050",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0006",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0044",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0001",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0002",
+      "check": "instance_soundness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0007",
+      "check": "definitional",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0037",
+      "check": "statement_faithfulness",
+      "gold": "faithful",
+      "majority_vote": "faithful",
+      "votes": [
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful",
+        "faithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    },
+    {
+      "id": "IT0055",
+      "check": "instance_soundness",
+      "gold": "unfaithful",
+      "majority_vote": "unfaithful",
+      "votes": [
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful",
+        "unfaithful"
+      ],
+      "agreement": 1.0,
+      "correct": true
+    }
+  ]
+}

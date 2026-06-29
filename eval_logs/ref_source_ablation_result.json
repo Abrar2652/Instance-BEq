@@ -1,0 +1,532 @@
+{
+  "items": [
+    {
+      "id": "IT0001",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0005",
+      "gold": "faithful",
+      "target": "Lasso_problem.f",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2 + \u2016x\u2016\u2081 * \u03bc"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A\u1d40 * (A * x - b))`"
+      }
+    },
+    {
+      "id": "IT0006",
+      "gold": "faithful",
+      "target": "Lasso_problem.g",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016x\u2016\u2081 * mu"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\text{sign}(x) \\max\\{|x| - t_k \\mu, 0\\} \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`sign(y) * max(|y| - t * \u03bc, 0)`"
+      }
+    },
+    {
+      "id": "IT0007",
+      "gold": "faithful",
+      "target": "Lasso_problem.target",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "self.g x + self.f x"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2 + \u2016x\u2016\u2081 * \u03bc"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`sign(y) * max(|y| - t * \u03bc, 0)`"
+      }
+    },
+    {
+      "id": "IT0011",
+      "gold": "faithful",
+      "target": "Lasso.f\u2081",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2 + \u2016y\u2016\u2081 * \u03bc)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\((A^T A + \\rho I)^{-1}(A^T b + \\rho(y - \\frac{\\nu}{\\rho}))\\)"
+      }
+    },
+    {
+      "id": "IT0012",
+      "gold": "faithful",
+      "target": "Lasso.f\u2082",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016x\u2016\u2081 * \u03bc"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2 + \u2016y\u2016\u2081 * \u03bc)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\[(A^T A + \\rho I)^{-1}\\bigl(A^T b + \\rho(y - \\frac{\\nu}{\\rho})\\bigr)\\]"
+      }
+    },
+    {
+      "id": "IT0018",
+      "gold": "faithful",
+      "target": "JointSparseCoding_problem.f",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016x\u2016\u2081 * lambda1"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x + B *\u1d65 y - b\u2016\u2082 ^ 2 / 2 + \u2016x\u2016\u2081 * \u03bb\u2081 + \u2016y\u2016\u2081 * \u03bb\u2082"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(c * \u03bb\u2081 * sign(x - c * \u2207\u2093_H) * max(abs(x - c * \u2207\u2093_H) - \u03bb\u2081 * c, 0))"
+      }
+    },
+    {
+      "id": "IT0019",
+      "gold": "faithful",
+      "target": "JointSparseCoding_problem.g",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016y\u2016\u2081 * lambda2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x + B *\u1d65 y - b\u2016\u2082 ^ 2 / 2 + \u2016x\u2016\u2081 * \u03bb\u2081 + \u2016y\u2016\u2081 * \u03bb\u2082"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "let x := \u2202\u2081((a \u2022 x + b \u2022 y - c) \u2022 (a \u2022 x + b \u2022 y - c))\nlet y := \u2202\u2082((a \u2022 x + b \u2022 "
+      }
+    },
+    {
+      "id": "IT0020",
+      "gold": "faithful",
+      "target": "JointSparseCoding_problem.H",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016A *\u1d65 z.1 + B *\u1d65 z.2 - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A *\u1d65 x + B *\u1d65 y - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(a \u2299 ((a \u2022 x + b \u2022 y - b) : \u211d) - \u03bb\u2081 * sgn(x)).abs.sum / 2 + (b \u2299 ((a \u2022 x + b \u2022 "
+      }
+    },
+    {
+      "id": "IT0021",
+      "gold": "faithful",
+      "target": "JointSparseCoding_problem.\u03c8",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "self.H z + self.f z.1 + self.g z.2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A *\u1d65 x + B *\u1d65 y - b\\|\u2082 ^ 2 + \u03bb\u2081 \u2016x\u2016\u2081 + \u03bb\u2082 \u2016y\u2016\u2081 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "S_(c_k * \u03bb\u2081) (x - c_k * A\u1d40 * (A * x + B * y - b))"
+      }
+    },
+    {
+      "id": "IT0025",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": "faithful",
+        "win_idx": 0,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0028",
+      "gold": "faithful",
+      "target": "Ridge_regression_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "lam_ / 2 * \u2016x\u2016\u2082 ^ 2 + \u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2 + \u03bb * \u2016x\u2016\u2082 ^ 2 / 2"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(a.transpose * (a * x - b) + \u03bb * x).normSqr / 2`"
+      }
+    },
+    {
+      "id": "IT0031",
+      "gold": "unfaithful",
+      "target": "Logistic_regression_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": null
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    },
+    {
+      "id": "IT0032",
+      "gold": "unfaithful",
+      "target": "Quadratic_minimization_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": null
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    },
+    {
+      "id": "IT0035",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0038",
+      "gold": "unfaithful",
+      "target": "Lasso_pro.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": null
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    },
+    {
+      "id": "IT0041",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0042",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0043",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0044",
+      "gold": "faithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\\( \\frac{1}{2} \\|A \\cdot\u1d65 x - b\\|\u2082 ^ 2 \\)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "`(A \u2b1d (A \u2b1d x - b)) *.\u2095 0.5`"
+      }
+    },
+    {
+      "id": "IT0045",
+      "gold": "unfaithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    },
+    {
+      "id": "IT0046",
+      "gold": "unfaithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    },
+    {
+      "id": "IT0047",
+      "gold": "unfaithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    },
+    {
+      "id": "IT0048",
+      "gold": "unfaithful",
+      "target": "LeastSquares_problem.f",
+      "curated": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "\u2016A *\u1d65 x - b\u2016\u2082 ^ 2 / 2"
+      },
+      "fewshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      },
+      "zeroshot": {
+        "verdict": null,
+        "win_idx": null,
+        "rhs": "(skipped: corrupted)"
+      }
+    }
+  ],
+  "summary": {
+    "curated": {
+      "faithful_coverage": "10/17",
+      "coverage": 0.588,
+      "false_certifications": 0,
+      "coverage_at_k": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    "fewshot": {
+      "faithful_coverage": "0/17",
+      "coverage": 0.0,
+      "false_certifications": 0,
+      "coverage_at_k": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "zeroshot": {
+      "faithful_coverage": "0/17",
+      "coverage": 0.0,
+      "false_certifications": 0,
+      "coverage_at_k": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "n_faithful": 17,
+  "n_corrupted": 7,
+  "tactic_ensemble": [
+    "unfold {t}; ring",
+    "unfold {t}; dsimp only; ring",
+    "unfold {t}; simp only []; ring",
+    "unfold {t}; rfl",
+    "simp only [{t}]; ring"
+  ],
+  "seconds": 1916
+}

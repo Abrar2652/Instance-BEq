@@ -1,0 +1,236 @@
+{
+  "corpus_size": 25,
+  "n_sound": 4,
+  "n_hollow": 21,
+  "items": [
+    {
+      "family": "GD_example",
+      "case": "original",
+      "truth": "sound",
+      "certifier": "sound",
+      "typecheck": "sound",
+      "llm_judge": "sound"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:update",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:hl",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:step\u2081",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "GD_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "PGD_example",
+      "case": "original",
+      "truth": "sound",
+      "certifier": "sound",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "PGD_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "PGD_example",
+      "case": "sorry:update",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "original",
+      "truth": "sound",
+      "certifier": "sound",
+      "typecheck": "sound",
+      "llm_judge": "sound"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:hl",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:teq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:\u03b3eq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:update1",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovFirst_example",
+      "case": "sorry:update2",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "original",
+      "truth": "sound",
+      "certifier": "sound",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:hl",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:initial",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:teq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:\u03b3eq",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update1",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update2",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "NesterovSecond_example",
+      "case": "sorry:update3",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "ADMM_example",
+      "case": "original",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    },
+    {
+      "family": "BCD_example",
+      "case": "original",
+      "truth": "hollow",
+      "certifier": "hollow",
+      "typecheck": "sound",
+      "llm_judge": "hollow"
+    }
+  ],
+  "methods": {
+    "Instance-BEq": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "P": 1.0,
+      "R": 1.0,
+      "F1": 1.0
+    },
+    "type-check-only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 21,
+      "tn": 4,
+      "P": null,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "LLM-judge": {
+      "tp": 21,
+      "fp": 2,
+      "fn": 0,
+      "tn": 2,
+      "P": 0.9130434782608695,
+      "R": 1.0,
+      "F1": 0.9545454545454545
+    }
+  }
+}
